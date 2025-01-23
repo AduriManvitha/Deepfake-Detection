@@ -1,0 +1,61 @@
+{%include "header.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #003399;
+  color: white;
+}
+</style>
+</head>
+<div class="breadcrumb-agile py-1">
+		<ol class="breadcrumb m-0">
+			<li class="breadcrumb-item">
+				<a href=""> Traffic Flow Control </a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page"></li>
+		</ol>
+	</div>
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section mb-md-5 mb-4">
+
+			</div>
+			<div class="login px-sm-4 mx-auto mw-100 login-wrapper">
+				 <center> <img src="{{ url_for('static',filename='output/'+file_name)}}" width="250" height="200" alt=""></center>
+
+			</div>
+		</div>
+		<table id="customers" align="center">
+  <tr>
+    <th>Vehicle Count</th>
+    <th>Time Allocation (Green_Light)</th>
+
+  </tr>
+
+			<tr><td align="center">{{vehicle_count}}</td>
+
+				<td>{{time}} sec.</td></tr>
+
+		</table>
+	</section>
+	<!-- //login -->
+
+{%include "footer.html" %}
